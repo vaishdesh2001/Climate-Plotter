@@ -1,1 +1,1 @@
-web: gunicorn app:flask_climate
+web: gunicorn flask_climate:app
