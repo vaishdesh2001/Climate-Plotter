@@ -34,10 +34,6 @@ def get_plot():
     return render_template('get_plot.html', title='Get Plot', form=form)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
 # No caching at all for API endpoints.
 @app.after_request
 def add_header(response):
