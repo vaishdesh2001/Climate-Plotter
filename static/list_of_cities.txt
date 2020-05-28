@@ -185,8 +185,8 @@ antofagasta
 antsirabe
 antwerp
 anyama
-anyang, gyeonggi
-anyang, henan
+anyang gyeonggi
+anyang henan
 aomori
 apalit
 aparecida de goiânia
@@ -216,8 +216,8 @@ argenteuil
 arica
 ariquemes
 arkhangelsk
-arlington, texas
-arlington, virginia
+arlington texas
+arlington virginia
 armavir
 armenia
 arnhem
@@ -242,7 +242,7 @@ astrakhan
 asunción
 aswan
 asyut
-athens, georgia
+athens georgia
 athens
 athi river
 atibaia
@@ -252,11 +252,11 @@ atushi
 atyrau
 auckland
 augsburg
-augusta, georgia
-aurangabad, bihar
-aurangabad, maharashtra
-aurora, colorado
-aurora, illinois
+augusta georgia
+aurangabad bihar
+aurangabad maharashtra
+aurora colorado
+aurora illinois
 austin
 avadi
 avellaneda
@@ -308,8 +308,8 @@ balikpapan
 baliuag
 ballarat
 ballia
-bally, bally-jagachha
-bally, howrah
+bally bally-jagachha
+bally howrah
 balneário camboriú
 bălți
 baltimore
@@ -352,7 +352,7 @@ barasat
 baraut
 barbacena
 barcarena
-barcelona, anzoátegui
+barcelona anzoátegui
 barcelona
 bardhaman
 bareilly
@@ -463,8 +463,8 @@ bhadreswar
 bhagalpur
 bhalswa jahangir pur
 bhalwal
-bharatpur, chitwan
-bharatpur, rajasthan
+bharatpur chitwan
+bharatpur rajasthan
 bharuch
 bhatpara
 bhavnagar
@@ -501,7 +501,7 @@ biratnagar
 birgunj
 birigui
 birjand
-birmingham, alabama
+birmingham alabama
 birmingham
 bishkek
 bishoftu
@@ -577,8 +577,8 @@ breda
 bremen
 bremerhaven
 brescia
-brest, brest
-brest, brittany
+brest brest
+brest brittany
 bridgeport
 brighton
 brisbane
@@ -614,7 +614,7 @@ burewala
 burgas
 burgos
 burhanpur
-burlington, ontario
+burlington ontario
 burnaby
 bursa
 busan
@@ -656,8 +656,8 @@ cẩm phả
 camaçari
 camagüey
 camaragibe
-cambridge, massachusetts
-cambridge, ontario
+cambridge massachusetts
+cambridge ontario
 cambridge
 cametá
 campeche
@@ -706,8 +706,8 @@ catacamas
 catanduva
 catania
 catbalogan
-cauayan, isabela
-cauayan, negros occidental
+cauayan isabela
+cauayan negros occidental
 caucaia
 cavite city
 caxias
@@ -715,7 +715,7 @@ caxias do sul
 cebu city
 cedar rapids
 celaya
-centennial, colorado
+centennial colorado
 central coast
 champdani
 chandannagar
@@ -852,10 +852,10 @@ colombo
 colombo
 colón
 colorado springs
-columbia, missouri
-columbia, south carolina
-columbus, georgia
-columbus, ohio
+columbia missouri
+columbia south carolina
+columbus georgia
+columbus ohio
 comayagua
 comilla
 comitán
@@ -876,8 +876,8 @@ coquimbo
 coquitlam
 coral springs
 córdoba
-córdoba, andalusia
-córdoba, veracruz
+córdoba andalusia
+córdoba veracruz
 cork
 çorlu
 corona
@@ -1072,8 +1072,8 @@ eastbourne
 ebetsu
 ebina
 ecatepec
-ede, gelderland
-ede, osun
+ede gelderland
+ede osun
 edinburgh
 edirne
 edmonton
@@ -1213,8 +1213,8 @@ fusagasugá
 fushun
 fuxin
 fuyang
-fuzhou, jiangxi
-fuzhou, fujian
+fuzhou jiangxi
+fuzhou fujian
 gabès
 gaborone
 gadag-betgeri
@@ -1274,8 +1274,8 @@ giugliano in campania
 giza
 glan
 glasgow
-glendale, arizona
-glendale, california
+glendale arizona
+glendale california
 gliwice
 gloucester
 godhra
@@ -1303,8 +1303,8 @@ gorzów wielkopolski
 gothenburg
 göttingen
 governador valadares
-granada, granada
-granada, andalusia
+granada granada
+granada andalusia
 grand prairie
 grand rapids
 gravataí
@@ -1491,7 +1491,7 @@ hofu
 hofuf
 hoima
 holguín
-hollywood, florida
+hollywood florida
 holon
 homs
 homyel
@@ -1544,8 +1544,8 @@ huntsville
 huozhou
 hurghada
 huzhou
-hyderabad, sindh
-hyderabad, andhra pradesh
+hyderabad sindh
+hyderabad andhra pradesh
 hyesan
 iaşi
 ibadan
@@ -1558,7 +1558,7 @@ ica
 ichalakaranji
 ichihara
 ichikawa
-ichinomiya, aichi
+ichinomiya aichi
 ichinoseki
 idlib
 ife
@@ -1638,7 +1638,7 @@ ituiutaba
 itumbiara
 ivano-frankivsk
 ivanovo
-iwaki, fukushima
+iwaki fukushima
 iwakuni
 iwata
 iwatsuki
@@ -1670,7 +1670,7 @@ jalgaon
 jalna
 jalpaiguri
 jamalpur
-jamalpur, bihar
+jamalpur bihar
 jambi
 jammu
 jamnagar
@@ -1780,8 +1780,8 @@ kaifeng
 kaili
 kairouan
 kaithal
-kaiyuan, liaoning
-kaiyuan, yunnan
+kaiyuan liaoning
+kaiyuan yunnan
 kajang
 kakamigahara
 kakegawa
@@ -1821,8 +1821,8 @@ kannur
 kano
 kanoya
 kanpur
-kansas city, kansas
-kansas city, missouri
+kansas city kansas
+kansas city missouri
 kaohsiung
 kaolack
 karabük
@@ -1931,7 +1931,7 @@ kimhae
 kindia
 kingston upon hull
 kingston
-kingston, ontario
+kingston ontario
 kinshasa
 kira town
 kirari suleman nagar
@@ -2054,7 +2054,7 @@ kyoto
 kyzyl
 kyzylorda
 la ceiba
-la paz, baja california sur
+la paz baja california sur
 la paz
 la plata
 la rioja
@@ -2301,7 +2301,7 @@ managua
 manama
 manaus
 manavgat
-manchester, new hampshire
+manchester new hampshire
 manchester
 mandalay
 mandaluyong
@@ -2360,7 +2360,7 @@ maseru
 mashhad
 masjed soleyman
 matadi
-matamoros, tamaulipas
+matamoros tamaulipas
 matanzas
 mataram
 mataró
@@ -2387,8 +2387,8 @@ mbarara
 mbeya
 mbour
 mbuji-mayi
-mcallen, texas
-mckinney, texas
+mcallen texas
+mckinney texas
 mecca
 medan
 medea
@@ -2404,14 +2404,14 @@ mekele
 meknes
 melbourne
 melitopol
-memphis, tennessee
+memphis tennessee
 mendoza
 mérida
 mérida
 mersin
-mesa, arizona
+mesa arizona
 mesquita
-mesquite, texas
+mesquite texas
 messad
 messina
 metepec
@@ -2421,7 +2421,7 @@ mexico city
 mexico
 meycauayan
 mezhdurechensk
-miami gardens, florida
+miami gardens florida
 miami
 miandoab
 mianyang
@@ -2433,12 +2433,12 @@ milagro
 milan
 milton keynes
 miluo
-milwaukee, wisconsin
+milwaukee wisconsin
 minatitlán
 mingechevir
 minglanilla
 mangora
-minneapolis, minnesota
+minneapolis minnesota
 minoh
 minsk
 minya
@@ -2460,10 +2460,10 @@ mito
 mixco
 miyakonojo
 miyazaki
-mobile, alabama
+mobile alabama
 moca
 modena
-modesto, california
+modesto california
 modinagar
 moers
 moga
@@ -2485,7 +2485,7 @@ montería
 monterrey
 montes claros
 montevideo
-montgomery, alabama
+montgomery alabama
 montpellier
 montreal
 montreuil
@@ -2496,7 +2496,7 @@ moradabad
 moratuwa
 morelia
 morena
-moreno valley, california
+moreno valley california
 moriguchi
 morioka
 morogoro
@@ -2524,7 +2524,7 @@ munich
 münster
 muntinlupa
 murcia
-murfreesboro, tennessee
+murfreesboro tennessee
 muriaé
 muridke
 murmansk
@@ -2555,7 +2555,7 @@ nacala
 nadiad
 nador
 naga
-naga, cebu
+naga cebu
 nagahama
 nagano
 nagaoka
@@ -2654,7 +2654,7 @@ new york
 newark
 newcastle upon tyne
 newcastle
-newport news, virginia
+newport news virginia
 newport
 neyagawa
 neyveli
@@ -2692,7 +2692,7 @@ nogales
 noginsk
 noida
 nonthaburi
-norfolk, virginia
+norfolk virginia
 norilsk
 norman
 norrköping
@@ -2792,7 +2792,7 @@ orsk
 oruro
 oryol
 osaka
-ōsaki, miyagi
+ōsaki miyagi
 osasco
 osh
 oshawa
@@ -2846,7 +2846,7 @@ pallavaram
 palm bay
 palma de mallorca
 palmas
-palmdale, california
+palmdale california
 palmira
 palopo
 palu
@@ -2861,7 +2861,7 @@ panipat
 panjin
 panvel
 panzhihua
-paradise, nevada
+paradise nevada
 parakou
 paramaribo
 paraná
@@ -2877,8 +2877,8 @@ parma
 parnaíba
 parnamirim
 parral
-pasadena, california
-pasadena, texas
+pasadena california
+pasadena texas
 pasay
 pasig
 passo fundo
@@ -2904,10 +2904,10 @@ pekanbaru
 pelotas
 pematang siantar
 pemba
-pembroke pines, florida
+pembroke pines florida
 penza
-peoria, arizona
-peoria, illinois
+peoria arizona
+peoria illinois
 pereira
 perez zeledon
 peristeri
@@ -2928,9 +2928,9 @@ petropavlovsk-kamchatsky
 petrópolis
 petrozavodsk
 pforzheim
-philadelphia, pennsylvania
+philadelphia pennsylvania
 phnom penh
-phoenix, arizona
+phoenix arizona
 phyongsong
 piacenza
 piedecuesta
@@ -2955,9 +2955,9 @@ pisco
 pitalito
 piteşti
 pithampur
-pittsburgh, pennsylvania
+pittsburgh pennsylvania
 piura
-plano, texas
+plano texas
 plaridel
 playa del carmen
 pleven
@@ -2976,7 +2976,7 @@ pointe-noire
 pokhara
 polomolok
 poltava
-pomona, california
+pomona california
 ponce
 pondicherry
 ponta grossa
@@ -2991,11 +2991,11 @@ port harcourt
 port louis
 port moresby
 port said
-port st. lucie, florida
+port st. lucie florida
 port sudan
 port-au-prince
 port-gentil
-portland, oregon
+portland oregon
 portmore
 porto alegre
 porto novo
@@ -3022,14 +3022,14 @@ pristina
 probolinggo
 proddatur
 prokopyevsk
-providence, rhode island
-provo, utah
+providence rhode island
+provo utah
 pskov
 pucallpa
 puducherry
 pudukkottai
 puebla de zaragoza
-pueblo, colorado
+pueblo colorado
 puente alto
 puerto cabello
 puerto cortés
@@ -3159,7 +3159,7 @@ ribeirão pires
 ribeirão preto
 richmond hill
 richmond
-richmond, california
+richmond california
 richmond
 riga
 rijeka
@@ -3182,8 +3182,8 @@ rize
 rizhao
 robertsonpet
 rochdale
-rochester, minnesota
-rochester, new york
+rochester minnesota
+rochester new york
 rockford
 rodriguez
 rohtak
@@ -3192,8 +3192,8 @@ rondonópolis
 rongcheng
 roodepoort
 roorkee
-rosario, batangas
-rosario, cavite
+rosario batangas
+rosario cavite
 rosario
 roseville
 rostock
@@ -3228,7 +3228,7 @@ sabadell
 sabára
 sabzewar
 sacaba
-sacramento, california
+sacramento california
 sadiqabad
 sadr city
 safi
@@ -3252,23 +3252,23 @@ saint-louis
 saint-paul
 saitama
 sakado
-sakai, osaka
+sakai osaka
 sakakah
 sakata
-sakura, chiba
+sakura chiba
 salalah
 salamanca
 salamanca
 salatiga
 salavat
 salé
-salem, oregon
+salem oregon
 salem
 salerno
 salihorsk
-salinas, california
+salinas california
 salmiya
-salt lake city, utah
+salt lake city utah
 salta
 saltillo
 salto
@@ -3284,33 +3284,33 @@ samawah
 sambalpur
 sambhal
 samsun
-san antonio, texas
-san bernardino, california
+san antonio texas
+san bernardino california
 san bernardo
-san buenaventura, california
-san carlos, negros occidental
-san carlos, pangasinan
+san buenaventura california
+san carlos negros occidental
+san carlos pangasinan
 san cristóbal de la laguna
 san cristóbal de las casas
 san cristóbal
 san cristóbal
-san diego, california
-san fernando, la union
-san fernando, pampanga
+san diego california
+san fernando la union
+san fernando pampanga
 san fernando de apure
 san fernando del valle de catamarca
-san francisco, california
+san francisco california
 san francisco de macorís
 san francisco del rincón
 san idelfonso
 san josé
-san jose, nueva ecija
-san jose, occidental mindoro
-san jose, california
-san jose del monte, bulacan
+san jose nueva ecija
+san jose occidental mindoro
+san jose california
+san jose del monte bulacan
 san juan
-san juan, batangas
-san juan, metro manila
+san juan batangas
+san juan metro manila
 san juan
 san juan bautista tuxtepec
 san juan de girón
@@ -3349,12 +3349,12 @@ sanming
 sano
 san-pédro
 santa ana de coro
-santa ana, california
+santa ana california
 santa ana
 santa bárbara d'oeste
 santa clara
-santa clara, california
-santa clarita, california
+santa clara california
+santa clarita california
 santa coloma de gramanet
 santa cruz
 santa cruz de la sierra
@@ -3364,18 +3364,18 @@ santa cruz do sul
 santa fe de bogotá
 santa fe
 santa lucía
-santa luzia, minas gerais
+santa luzia minas gerais
 santa maria
 santa maria
 santa marta
 santa rita
 santa rosa
-santa rosa, california
+santa rosa california
 santa tecla
 santana de parnaíba
 santana
 santander
-santarém, brazil
+santarém brazil
 santiago
 santiago
 santiago de cuba
@@ -3389,8 +3389,8 @@ santo domingo de los colorados
 santo domingo este
 santo domingo norte
 santo domingo oeste
-santo tomas, batangas
-santo tomas, davao del norte
+santo tomas batangas
+santo tomas davao del norte
 santos
 sanya
 são bernardo do campo
@@ -3427,12 +3427,12 @@ sassari
 satara
 satna
 satu mare
-savannah, georgia
+savannah georgia
 saveh
 sawai madhopur
 sayama
 schaerbeek
-scottsdale, arizona
+scottsdale arizona
 seam reab
 seattle
 secunderabad
@@ -3516,7 +3516,7 @@ shiyan
 shizuishan
 shizuoka
 shkodër
-shreveport, louisiana
+shreveport louisiana
 shuangcheng
 shuangyashan
 shubra al khaymah
@@ -3538,7 +3538,7 @@ silay
 silchar
 siliguri
 simferopol
-simi valley, california
+simi valley california
 simões filho
 sincelejo
 singapore
@@ -3547,7 +3547,7 @@ singrauli
 sinop
 sinpo
 sinuiji
-sioux falls, south dakota
+sioux falls south dakota
 siping
 sirjan
 sirsa
@@ -3584,7 +3584,7 @@ sorsogon city
 sosnowiec
 soubré
 souk ahras
-south bend, indiana
+south bend indiana
 south dum dum
 south tangerang
 southampton
@@ -3593,10 +3593,10 @@ soweto
 soyapango
 spanish town
 split
-spokane, washington
-springfield, illinois
-springfield, massachusetts
-springfield, missouri
+spokane washington
+springfield illinois
+springfield massachusetts
+springfield missouri
 springs
 sri jayawardenepura kotte
 sri muktsar sahib
@@ -3606,20 +3606,20 @@ ssabagabo
 st. catharines
 st. helens
 st. john's
-st. louis, missouri
-st. paul, minnesota
-st. petersburg, florida
+st. louis missouri
+st. paul minnesota
+st. petersburg florida
 stakhanov
-stamford, connecticut
+stamford connecticut
 stara zagora
 stary oskol
 stavanger
 stavropol
-sterling heights, michigan
+sterling heights michigan
 sterlitamak
 stockholm
 stockport
-stockton, california
+stockton california
 stoke-on-trent
 strasbourg
 stuttgart
@@ -3649,7 +3649,7 @@ suncheon
 sunchon
 sunderland
 sungai petani
-sunnyvale, california
+sunnyvale california
 sunshine coast
 sunyani
 suqian
@@ -3667,15 +3667,15 @@ suryapet
 suwayq
 suwon
 suzano
-suzhou, anhui
-suzhou, jiangsu
+suzhou anhui
+suzhou jiangsu
 suzuka
 swansea
 swindon
 sydney
 syktyvkar
 syracuse
-syracuse, new york
+syracuse new york
 syzran
 szczecin
 szeged
@@ -3689,7 +3689,7 @@ tacheng
 tachikawa
 tacloban
 tacna
-tacoma, washington
+tacoma washington
 tadepalligudem
 tadipatri
 taganrog
@@ -3704,8 +3704,8 @@ taipei
 taiping
 taiyuan
 taiz
-taizhou, jiangsu
-taizhou, zhejiang
+taizhou jiangsu
+taizhou zhejiang
 taji
 tajimi
 takamatsu
@@ -3718,16 +3718,16 @@ talavera
 talca
 talcahuano
 taldıqorğan
-talisay, cebu
-talisay, negros occidental
-tallahassee, florida
+talisay cebu
+talisay negros occidental
+tallahassee florida
 tallinn
 taloqan
 tama
 tamale
 tambaram
 tambov
-tampa, florida
+tampa florida
 tampere
 tampico
 tanauan
@@ -3782,9 +3782,9 @@ telford
 tema
 temara
 tembisa
-temecula, california
+temecula california
 temirtau
-tempe, arizona
+tempe arizona
 temuco
 tenali
 tengzhou
@@ -3810,7 +3810,7 @@ thimphu
 thiruvananthapuram
 thoothukudi
 thornton
-thousand oaks, california
+thousand oaks california
 thrissur
 thunder bay
 tianjin
@@ -3851,9 +3851,9 @@ tokorozawa
 tokushima
 tokuyama
 tokyo
-toledo, paraná
+toledo paraná
 toledo
-toledo, ohio
+toledo ohio
 toliara
 toluca
 tolyatti
@@ -3869,11 +3869,11 @@ tongling
 tongren
 tonk
 toowoomba
-topeka, kansas
+topeka kansas
 torbat-e heydarieh
 toride
 toronto
-torrance, california
+torrance california
 torrejón de ardoz
 torreón
 toruń
@@ -3906,13 +3906,13 @@ tsukuba
 tsuruoka
 tsuyama
 tubarão
-tucson, arizona
+tucson arizona
 tucuruí
 tuguegarao
 tula de allende
 tula
 tulancingo
-tulsa, oklahoma
+tulsa oklahoma
 tulua
 tulufan
 tumaco
@@ -3999,8 +3999,8 @@ valparaíso de goiás
 valparaíso
 valsad
 van
-vancouver, washington
-vancouver, british columbia
+vancouver washington
+vancouver british columbia
 vantaa
 vapi
 varamin
@@ -4024,7 +4024,7 @@ viamão
 vicente lópez
 vicenza
 victoria
-victorville, california
+victorville california
 vidisha
 vienna
 vientiane
@@ -4080,7 +4080,7 @@ wardha
 warren
 warrington
 warsaw
-washington, d.c.
+washington d.c.
 waterbury
 waterloo
 wau
@@ -4164,7 +4164,7 @@ yakutsk
 yalova
 yamagata
 yamaguchi
-yamato, kanagawa
+yamato kanagawa
 yamoussoukro
 yamuna nagar
 yan'an
@@ -4192,8 +4192,8 @@ yessentuki
 yevpatoria
 yibin
 yichang
-yichun, heilongjiang
-yichun, jiangxi
+yichun heilongjiang
+yichun jiangxi
 yidu
 yima
 yinchuan
@@ -4218,8 +4218,8 @@ york
 yoshkar-ola
 yuanjiang
 yueyang
-yulin, guangxi
-yulin, shaanxi
+yulin guangxi
+yulin shaanxi
 yumen
 yuncheng
 yusufiyah

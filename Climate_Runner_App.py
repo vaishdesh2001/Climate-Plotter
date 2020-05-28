@@ -140,10 +140,15 @@ def return_city_url(city_name):
     rows = table.find_all("tr")
     find_url = ""
     for each_row in rows:
+
         data = each_row.find("td")
         if data is None:
             continue
-        if data.get_text().lower() == city_name.lower():
+        data_str = data.get_text()
+        if "," in data_str:
+            parts = data.get_text().split(",")
+            data_str = parts[0] + parts[1]
+        if data_str.lower() == city_name.lower():
             a_tag = data.find("a", href=True)
             link_val = a_tag["href"]
             find_url = "https://en.wikipedia.org/" + link_val
@@ -196,18 +201,22 @@ def ret_list_alpha(html_file):
 # then, writing it into a file
 def writing_list_cities():
     list_cities = []
-    if not os.path.exists("list_of_cities.txt"):
+    if not os.path.exists(os.path.join("static", "list_of_cities.txt")):
         for i in range(26):
             val = 65 + i
             file_name = str(chr(val)) + ".html"
             list_each_letter = ret_list_alpha(file_name)
             list_cities.extend(list_each_letter)
-        f_cities_list = open("list_of_cities.txt", "w", encoding="utf-8")
+        f_cities_list = open(os.path.join("static", "list_of_cities.txt"), "w", encoding="utf-8")
         for each_city in list_cities:
+            str_city = each_city
+            if "," in str_city:
+                two_parts = str_city.split(",")
+                str_city = two_parts[0] + two_parts[1]
             if each_city == list_cities[-1]:
-                f_cities_list.write(each_city)
+                f_cities_list.write(str_city)
             else:
-                f_cities_list.write(each_city + "\n")
+                f_cities_list.write(str_city + "\n")
 
         f_cities_list.close()
 
@@ -215,10 +224,8 @@ def writing_list_cities():
 # generates a list of all possible climate stats
 def create_list_cities():
     # creating a list of cities to work with throughout the code
-    list_cities = []
-    two_name_cities = []
     writing_list_cities()
-    f_read_cities = open("list_of_cities.txt", encoding="utf-8")
+    f_read_cities = open(os.path.join("static", "list_of_cities.txt"), encoding="utf-8")
     str_contents = f_read_cities.read()
     list_cities = str_contents.split("\n")
 
@@ -269,6 +276,21 @@ def assign_city(list_cities, str_input):
         for i in range(len(list_cities)):
             if list_cities[i] in str_input:
                 all_matches.append(list_cities[i])
+
+        flag = 1
+        text = nltk.word_tokenize(str_input)
+        for each_match in all_matches:
+            if each_match in text:
+                flag = 0
+                break
+
+        if flag == 1:
+            all_matches = []
+            for each_word in text:
+                for i in range(len(list_cities)):
+                    if each_word in list_cities[i]:
+                        all_matches.append(list_cities[i])
+
         if len(all_matches) == 1:
             city = all_matches[0]
             return city
@@ -339,9 +361,6 @@ def ret_stat(list_stats, str_input):
 # given a string input, finds the required city and type of stat
 def assign_city_type_stat(list_cities, list_stats, str_input, compare_bool=False):
     if not compare_bool:
-        given_city = ""
-        type_stat = ""
-        all_matches = []
         # here is where you check for the city in input
         given_city = assign_city(list_cities, str_input)
         type_stat = ret_stat(list_stats, str_input)
@@ -431,7 +450,7 @@ def double_city_plot(list_cities, list_stats, str_input):
     # for data management and accessibility
     df_city1 = each_stat_plot_climate(table_city1, type_stat)
     df_city2 = each_stat_plot_climate(table_city2, type_stat)
-    plt.rcParams["figure.figsize"] = [10,5]
+    plt.rcParams["figure.figsize"] = [10, 5]
     plt.scatter(list_months, list_specs1, marker='x', label=city1.capitalize())
     plt.scatter(list_months, list_specs2, marker='s', label=city2.capitalize())
     if "Climate data for" in table_city1_title and "Climate data for" in table_city2_title:
@@ -489,3 +508,5 @@ def main(str_input):
             print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             print("or your sentence doesn't contain a recognized climate statistic for this city")
 
+
+main("saint petersburg snowy days")
