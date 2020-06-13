@@ -163,6 +163,8 @@ def city_stat_plot(name, stat_type, specific_stat):
     climate_table_city_title = parse_html_tables(name + "_data.html", stat_type)
     climate_table_city = climate_table_city_title[0]
     title = climate_table_city_title[1]
+    if title[0:3].lower() == "vte":
+        title = title[3:]
     return plot_screen(climate_table_city, specific_stat, title)
 
 
@@ -378,6 +380,24 @@ def assign_city_type_stat(list_cities, list_stats, str_input, compare_bool=False
 
         type_stat = ret_stat(list_stats, str_input)
 
+        flag = 1
+        text = nltk.word_tokenize(str_input)
+        for each_match in all_matches:
+            if each_match in text:
+                flag = 0
+                break
+
+        if flag == 1:
+            all_matches = []
+            for each_word in text:
+                list_word = [each_word]
+                if nltk.pos_tag(list_word)[0][1] != 'NN':
+                    continue
+
+                for i in range(len(list_cities)):
+                    if each_word in list_cities[i]:
+                        all_matches.append(list_cities[i])
+
         if len(all_matches) == 0:
             return city1, city2, type_stat
         else:
@@ -432,7 +452,6 @@ def double_city_plot(list_cities, list_stats, str_input):
     city2 = cities_stats[1]
     type_stat = cities_stats[2]
     assert city1 != "" and city1 is not None and city2 != "" and city2 is not None and type_stat != "" and type_stat is not None
-    combined_title = ""
     download(city1 + "_data.html", return_city_url(city1))
     download(city2 + "_data.html", return_city_url(city2))
     tuple_city1 = parse_html_tables((city1 + "_data.html"), "climate")
@@ -447,9 +466,6 @@ def double_city_plot(list_cities, list_stats, str_input):
     y_axis_title = list_specs_city1_title[1]
     list_specs_city2_title = ret_list_stat_values(table_city2, type_stat)
     list_specs2 = list_specs_city2_title[0]
-    # for data management and accessibility
-    df_city1 = each_stat_plot_climate(table_city1, type_stat)
-    df_city2 = each_stat_plot_climate(table_city2, type_stat)
     plt.rcParams["figure.figsize"] = [10, 5]
     plt.scatter(list_months, list_specs1, marker='x', label=city1.capitalize())
     plt.scatter(list_months, list_specs2, marker='s', label=city2.capitalize())
@@ -457,6 +473,8 @@ def double_city_plot(list_cities, list_stats, str_input):
         if "edit" in table_city1_title:
             parts = table_city1_title.split("edit")
             table_city1_title = parts[0] + parts[1]
+            if table_city1_title[0:3].lower() == "vte":
+                table_city1_title = table_city1_title[3:]
         if "edit" in table_city2_title:
             parts = table_city2_title.split("edit")
             table_city2_title = parts[0] + parts[1]
@@ -508,5 +526,4 @@ def main(str_input):
             print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             print("or your sentence doesn't contain a recognized climate statistic for this city")
 
-
-main("saint petersburg snowy days")
+main("give me bangalore and hyderabad rainfall")
