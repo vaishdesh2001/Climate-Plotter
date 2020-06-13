@@ -269,6 +269,7 @@ def create_list_stats(list_cities, str_input):
 
 # remember to use this in assign_city_type_stat!!!!!!
 def assign_city(list_cities, str_input):
+    str_input = str_input.lower()
     city = check_hyphen(str_input, list_cities)
     if city is not None:
         return city
@@ -292,6 +293,9 @@ def assign_city(list_cities, str_input):
                 for i in range(len(list_cities)):
                     if each_word in list_cities[i]:
                         all_matches.append(list_cities[i])
+
+        if len(all_matches) == 0:
+            return None
 
         if len(all_matches) == 1:
             city = all_matches[0]
@@ -496,7 +500,7 @@ def main(str_input):
     generating_city_files()
     list_cities = create_list_cities()
     try:
-        list_stats = create_list_stats(list_cities, str_input)
+        list_stats = create_list_stats(list_cities, str_input.lower())
     except AssertionError:
         print("Your sentence does not contain a city, or the city has a population lesser than 100k")
         return
@@ -521,9 +525,7 @@ def main(str_input):
         return given_city
     else:
         try:
-            return double_city_plot(list_cities, list_stats, str_input)
+            return double_city_plot(list_cities, list_stats, str_input.lower)
         except AssertionError:
             print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             print("or your sentence doesn't contain a recognized climate statistic for this city")
-
-main("give me bangalore and hyderabad rainfall")
