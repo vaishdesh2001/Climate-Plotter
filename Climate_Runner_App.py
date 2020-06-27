@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import nltk
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import figure
 
 
 # download html with the given filename given the url
@@ -100,7 +101,6 @@ def ret_list_stat_values(climate_table_city, keyword):
 
 # constructing the dataframe to construct a plot
 def each_stat_plot_climate(climate_table_city, keyword):
-    specific_row = None
     if climate_table_city is None:
         raise ValueError("No Climate Table Found")
 
@@ -110,6 +110,7 @@ def each_stat_plot_climate(climate_table_city, keyword):
     list_vals = list_vals_titles[0]
     name_y_axis = list_vals_titles[1]
     # constructing the dataframe
+
     dict_val_plot = {"Month": list_months, name_y_axis: list_vals}
     df_data = pd.DataFrame(dict_val_plot, list_months)
     df_data = df_data.reset_index(drop=True)
@@ -122,17 +123,24 @@ def plot_screen(climate_table_city, keyword, title_plot):
     df_tuple = each_stat_plot_climate(climate_table_city, keyword)
     df_data = df_tuple[0]
     name_y_axis = df_tuple[1]
-    plt.rcParams["figure.figsize"] = [10, 5]
-    stat_plot = df_data.plot.scatter(x="Month", y=name_y_axis, c="black")
+    figure(num=None, figsize=(16, 9), dpi=70, facecolor='w', edgecolor='k')
+    plt.scatter(df_data["Month"], df_data[name_y_axis], marker='o')
+    plt.xlabel("Month")
+    plt.ylabel(name_y_axis)
+    if "vte" in title_plot:
+        parts = title_plot.split("vte")
+        title_plot = parts[1]
+    if "edit" in title_plot:
+        part_edit = title_plot.split("edit")
+        title_plot = part_edit[0].strip() + part_edit[1]
     plt.title(title_plot)
-    return stat_plot
 
 
 # function that returns the appropriate url for the city
 def return_city_url(city_name):
     assert city_name is not None
     starting_letter = city_name[0]
-    f_spec_html = open(os.path.join("city_html_files", starting_letter + ".html"), encoding="utf-8")
+    f_spec_html = open(os.path.join("city_html_files", starting_letter.upper() + ".html"), encoding="utf-8")
     html_text = f_spec_html.read()
     f_spec_html.close()
     doc = BeautifulSoup(html_text, "html.parser")
@@ -256,6 +264,8 @@ def create_list_stats(list_cities, str_input):
     city_url = return_city_url(city)
     download(city + "_data.html", city_url)
     table_climate = parse_html_tables(city + "_data.html", "climate")[0]
+    if table_climate is None:
+        raise ValueError("No Climate Table found for the Given City!")
     table_rows = table_climate.find_all("tr")
     table_rows = table_rows[2:]  # ignoring the table heading and month row
     list_stats = []
@@ -267,9 +277,8 @@ def create_list_stats(list_cities, str_input):
     return list_stats
 
 
-# remember to use this in assign_city_type_stat!!!!!!
 def assign_city(list_cities, str_input):
-    str_input = str_input.lower()
+    str_input = str_input
     city = check_hyphen(str_input, list_cities)
     if city is not None:
         return city
@@ -361,6 +370,10 @@ def ret_stat(list_stats, str_input):
                     type_stat = each_stat
                     break
 
+    if "inches" in type_stat or "cm" in type_stat:
+        part_unit = type_stat.split("inches")
+        type_stat = part_unit[0]
+
     return type_stat
 
 
@@ -445,7 +458,7 @@ def check_compare(list_cities, list_stats, str_input):
 
 # method that calls city_stat_plot() if there is only one city in the input
 def single_plot(given_city, type_stat):
-    city_plot_title = city_stat_plot(given_city, "climate", type_stat)
+    city_stat_plot(given_city, "climate", type_stat)
     plt.savefig(os.path.join("static", given_city + ".png"))
 
 
@@ -470,7 +483,7 @@ def double_city_plot(list_cities, list_stats, str_input):
     y_axis_title = list_specs_city1_title[1]
     list_specs_city2_title = ret_list_stat_values(table_city2, type_stat)
     list_specs2 = list_specs_city2_title[0]
-    plt.rcParams["figure.figsize"] = [10, 5]
+    figure(num=None, figsize=(16, 9), dpi=70, facecolor='w', edgecolor='k')
     plt.scatter(list_months, list_specs1, marker='x', label=city1.capitalize())
     plt.scatter(list_months, list_specs2, marker='s', label=city2.capitalize())
     if "Climate data for" in table_city1_title and "Climate data for" in table_city2_title:
@@ -483,6 +496,9 @@ def double_city_plot(list_cities, list_stats, str_input):
             parts = table_city2_title.split("edit")
             table_city2_title = parts[0] + parts[1]
         combined_title = table_city1_title + " and" + table_city2_title.split("Climate data for")[1]
+        if "vte" in combined_title:
+            parts_vte = combined_title.split("vte")
+            combined_title = parts_vte[1]
         plt.title(combined_title)
     plt.xlabel("Month")
     plt.ylabel(y_axis_title)
@@ -496,11 +512,16 @@ def double_city_plot(list_cities, list_stats, str_input):
 
 
 def main(str_input):
+    str_input = str_input.lower()
     plt.clf()
     generating_city_files()
     list_cities = create_list_cities()
     try:
-        list_stats = create_list_stats(list_cities, str_input.lower())
+        list_stats = create_list_stats(list_cities, str_input)
+    except ValueError:
+        raise ValueError("")
+        print("No Climate Table found for the given city")
+        return
     except AssertionError:
         print("Your sentence does not contain a city, or the city has a population lesser than 100k")
         return
@@ -525,7 +546,8 @@ def main(str_input):
         return given_city
     else:
         try:
-            return double_city_plot(list_cities, list_stats, str_input.lower)
+            return double_city_plot(list_cities, list_stats, str_input.lower())
         except AssertionError:
             print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             print("or your sentence doesn't contain a recognized climate statistic for this city")
+
