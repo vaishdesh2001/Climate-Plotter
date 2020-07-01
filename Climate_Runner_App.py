@@ -248,7 +248,12 @@ def num_city_grabber(list_cities, list_stats, str_input):
     tuple_cities = assign_city_type_stat(list_cities, list_stats, str_input, True)[:-1]
     city1 = tuple_cities[0]
     city2 = tuple_cities[1]
-
+    print(city1, city2)
+    parts = str_input.split(" ")
+    for each in parts:
+        for each_stat in list_stats:
+            if each in each_stat and each in city1 or each in city2:
+                return 1
     if tuple_cities[1] == "" or tuple_cities[1] is None:
         return 1
     elif city1 in city2 or city2 in city1:
@@ -451,6 +456,7 @@ def check_empty_city_type(given_city, type_stat):
 
 # checks if there are more than one city in input
 def check_compare(list_cities, list_stats, str_input):
+
     if num_city_grabber(list_cities, list_stats, str_input) == 2:
         return True
     return False
@@ -551,3 +557,4 @@ def main(str_input):
             print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             print("or your sentence doesn't contain a recognized climate statistic for this city")
 
+main("madison snow")
