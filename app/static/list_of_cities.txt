@@ -1069,6 +1069,7 @@ duyun
 düzce
 dzerzhinsk
 eastbourne
+east london
 ebetsu
 ebina
 ecatepec
@@ -1253,6 +1254,7 @@ general santos
 general trias
 geneva
 genoa
+george
 george town
 georgetown
 germiston
@@ -2385,6 +2387,7 @@ mazyr
 mbandaka
 mbarara
 mbeya
+mbombela
 mbour
 mbuji-mayi
 mcallen texas

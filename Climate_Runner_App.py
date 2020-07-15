@@ -10,7 +10,7 @@ from matplotlib.pyplot import figure
 # download html with the given filename given the url
 def download(filename, url):
     # doesn't download if the file is already downloaded
-    if os.path.exists(os.path.join("city_html_files", filename)):
+    if os.path.exists(os.path.join("app", "city_html_files", filename)):
         return
 
     # initializing the response object through the requests module
@@ -20,14 +20,14 @@ def download(filename, url):
 
     if ".html" in filename:
         doc = BeautifulSoup(resp.text, "html.parser")
-        f = open(os.path.join("city_html_files", filename), "w", encoding="utf-8")
+        f = open(os.path.join("app", "city_html_files", filename), "w", encoding="utf-8")
         f.write(str(doc))
         f.close()
 
 
 # finding tables with the heading having the keyword and returns the soup table and the title of the table
 def parse_html_tables(html_file, keyword):
-    f_spec_city = open(os.path.join("city_html_files", html_file), encoding="utf-8")
+    f_spec_city = open(os.path.join("app", "city_html_files", html_file), encoding="utf-8")
     html_text = f_spec_city.read()
     f_spec_city.close()
     doc = BeautifulSoup(html_text, "html.parser")
@@ -140,7 +140,7 @@ def plot_screen(climate_table_city, keyword, title_plot):
 def return_city_url(city_name):
     assert city_name is not None
     starting_letter = city_name[0]
-    f_spec_html = open(os.path.join("city_html_files", starting_letter.upper() + ".html"), encoding="utf-8")
+    f_spec_html = open(os.path.join("app", "city_html_files", starting_letter.upper() + ".html"), encoding="utf-8")
     html_text = f_spec_html.read()
     f_spec_html.close()
     doc = BeautifulSoup(html_text, "html.parser")
@@ -193,7 +193,7 @@ def generating_city_files():
 # collecting all cities in alphabetical order in a complete list
 def ret_list_alpha(html_file):
     list_letter = []
-    f = open(os.path.join("city_html_files", html_file), encoding="utf-8")
+    f = open(os.path.join("app", "city_html_files", html_file), encoding="utf-8")
     html_text = f.read()
     f.close()
     doc = BeautifulSoup(html_text, "html.parser")
@@ -211,13 +211,13 @@ def ret_list_alpha(html_file):
 # then, writing it into a file
 def writing_list_cities():
     list_cities = []
-    if not os.path.exists(os.path.join("static", "list_of_cities.txt")):
+    if not os.path.exists(os.path.join("app", "static", "list_of_cities.txt")):
         for i in range(26):
             val = 65 + i
             file_name = str(chr(val)) + ".html"
             list_each_letter = ret_list_alpha(file_name)
             list_cities.extend(list_each_letter)
-        f_cities_list = open(os.path.join("static", "list_of_cities.txt"), "w", encoding="utf-8")
+        f_cities_list = open(os.path.join("app", "static", "list_of_cities.txt"), "w", encoding="utf-8")
         for each_city in list_cities:
             str_city = each_city
             if "," in str_city:
@@ -235,7 +235,7 @@ def writing_list_cities():
 def create_list_cities():
     # creating a list of cities to work with throughout the code
     writing_list_cities()
-    f_read_cities = open(os.path.join("static", "list_of_cities.txt"), encoding="utf-8")
+    f_read_cities = open(os.path.join("app", "static", "list_of_cities.txt"), encoding="utf-8")
     str_contents = f_read_cities.read()
     list_cities = str_contents.split("\n")
 
@@ -463,7 +463,7 @@ def check_compare(list_cities, list_stats, str_input):
 # method that calls city_stat_plot() if there is only one city in the input
 def single_plot(given_city, type_stat):
     city_stat_plot(given_city, "climate", type_stat)
-    plt.savefig(os.path.join("static", given_city + ".png"))
+    plt.savefig(os.path.join("app", "static", given_city + ".png"))
 
 
 # method that handles plotting when there is comparison of ONE OR MORE CITIES
@@ -508,10 +508,10 @@ def double_city_plot(list_cities, list_stats, str_input):
     plt.ylabel(y_axis_title)
     plt.legend(loc='best')
     if city1 < city2:
-        plt.savefig(os.path.join("static", city1 + ".png"))
+        plt.savefig(os.path.join("app", "static", city1 + ".png"))
         return city1
     else:
-        plt.savefig(os.path.join("static", city2 + ".png"))
+        plt.savefig(os.path.join("app", "static", city2 + ".png"))
         return city2
 
 
