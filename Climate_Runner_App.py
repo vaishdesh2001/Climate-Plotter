@@ -148,7 +148,6 @@ def return_city_url(city_name):
     rows = table.find_all("tr")
     find_url = ""
     for each_row in rows:
-
         data = each_row.find("td")
         if data is None:
             continue
@@ -282,7 +281,6 @@ def create_list_stats(list_cities, str_input):
 
 
 def assign_city(list_cities, str_input):
-    str_input = str_input
     city = check_hyphen(str_input, list_cities)
     if city is not None:
         return city
@@ -293,19 +291,12 @@ def assign_city(list_cities, str_input):
             if list_cities[i] in str_input:
                 all_matches.append(list_cities[i])
 
-        flag = 1
         text = nltk.word_tokenize(str_input)
-        for each_match in all_matches:
-            if each_match in text:
-                flag = 0
-                break
 
-        if flag == 1:
-            all_matches = []
-            for each_word in text:
-                for i in range(len(list_cities)):
-                    if each_word in list_cities[i]:
-                        all_matches.append(list_cities[i])
+        for each_match in all_matches:
+            for word in text:
+                if each_match in word and len(each_match)<len(word):
+                    all_matches.remove(each_match)
 
         if len(all_matches) == 0:
             return None
@@ -401,23 +392,11 @@ def assign_city_type_stat(list_cities, list_stats, str_input, compare_bool=False
 
         type_stat = ret_stat(list_stats, str_input)
 
-        flag = 1
         text = nltk.word_tokenize(str_input)
         for each_match in all_matches:
-            if each_match in text:
-                flag = 0
-                break
-
-        if flag == 1:
-            all_matches = []
-            for each_word in text:
-                list_word = [each_word]
-                if nltk.pos_tag(list_word)[0][1] != 'NN':
-                    continue
-
-                for i in range(len(list_cities)):
-                    if each_word in list_cities[i]:
-                        all_matches.append(list_cities[i])
+            for word in text:
+                if each_match in word and len(each_match) < len(word):
+                    all_matches.remove(each_match)
 
         if len(all_matches) == 0:
             return city1, city2, type_stat
@@ -545,6 +524,7 @@ def main(str_input):
                 print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             if type_stat == "" or type_stat is None:
                 print("Your sentence does not contain a recognized climate statistic for this city")
+                return "no_stat", list_stats
             return
         single_plot(given_city, type_stat)
         return given_city
@@ -556,4 +536,4 @@ def main(str_input):
             print("or your sentence doesn't contain a recognized climate statistic for this city")
 
 
-main("madison and chicago snow")
+main("dubai rainfall")
