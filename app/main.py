@@ -31,6 +31,12 @@ def get_plot():
         except ValueError:
             flash(f"No climate table found for the given city '{str_input}'", 'danger')
             return render_template('get_plot.html', title='Get Plot', form=form)
+        if type(city) == tuple:
+
+            flash(f" choose from these climate statistics! " + str(city[1]),
+                  'danger')
+            return render_template('get_plot.html', title='Get Plot', form=form)
+
         if city is None:
             flash(f"'{form.str_input.data}' does not contain a city, or the city has a population lesser than 100k or "
                   f"your sentence doesn't contain a recognized climate statistic for this city! ",
