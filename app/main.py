@@ -2,7 +2,6 @@ from flask import Flask, render_template, flash
 from forms import Get_Plot
 import Climate_Runner_App
 
-#web app runner
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
@@ -22,21 +21,26 @@ def about():
 
 @app.route("/Get Plot", methods=['GET', 'POST'])
 def get_plot():
+    # accesses form data collected through get_plot
     form = Get_Plot()
     if form.validate_on_submit():
+        # collecting form data into a string
         str_input = form.str_input.data
         plot_command = str_input
         try:
+            # return value from the climate_runner_app
             city = Climate_Runner_App.main(str_input)
         except ValueError:
+            # if there is no climate table found for the city entered
             flash(f"No climate table found for the given city '{str_input}'", 'danger')
             return render_template('get_plot.html', title='Get Plot', form=form)
         if type(city) == tuple:
-
+            # climate stats don't match
             flash(f" choose from these climate statistics! " + str(city[1]),
                   'danger')
             return render_template('get_plot.html', title='Get Plot', form=form)
 
+        # a city was not entered
         if city is None:
             flash(f"'{form.str_input.data}' does not contain a city, or the city has a population lesser than 100k or "
                   f"your sentence doesn't contain a recognized climate statistic for this city! ",
@@ -44,6 +48,7 @@ def get_plot():
             return render_template('get_plot.html', title='Get Plot', form=form)
         flash(f'Plot created for "{form.str_input.data}" !', 'light')
         return render_template('output.html', command=plot_command, city=city)
+    # if the form doesn't go through because it has too little or too many characters
     return render_template('get_plot.html', title='Get Plot', form=form)
 
 
