@@ -124,7 +124,7 @@ def plot_screen(climate_table_city, keyword, title_plot):
     df_data = df_tuple[0]
     name_y_axis = df_tuple[1]
     figure(num=None, figsize=(16, 9), dpi=70, facecolor='w', edgecolor='k')
-    plt.scatter(df_data["Month"], df_data[name_y_axis], marker='o')
+    plt.plot(df_data["Month"], df_data[name_y_axis], '-o')
     plt.xlabel("Month")
     plt.ylabel(name_y_axis)
     if "vte" in title_plot:
@@ -260,6 +260,7 @@ def num_city_grabber(list_cities, list_stats, str_input):
         return 2
 
 
+# creates a list of possible stats for that city
 def create_list_stats(list_cities, str_input):
     city = assign_city(list_cities, str_input)
     if city == "":
@@ -280,6 +281,7 @@ def create_list_stats(list_cities, str_input):
     return list_stats
 
 
+# finds a city in the input
 def assign_city(list_cities, str_input):
     city = check_hyphen(str_input, list_cities)
     if city is not None:
@@ -314,6 +316,7 @@ def assign_city(list_cities, str_input):
             return max_city
 
 
+# returns an overlap of two strings
 def return_overlap_string(str1, str2):
     overlap_string = ""
     parts_str1 = str1.split(" ")
@@ -332,6 +335,7 @@ def return_overlap_string(str1, str2):
     return overlap_string.strip()
 
 
+# returns the climate statistic as specified in input
 def ret_stat(list_stats, str_input):
     type_stat = ""
     stripped_list_stats = []
@@ -347,6 +351,7 @@ def ret_stat(list_stats, str_input):
         if list_stats[i] in str_input:
             type_stat = list_stats[i]
 
+    overlap_string = ""
     if type_stat == "":
         for each_stat in list_stats:
             overlap_string = return_overlap_string(each_stat, str_input)
@@ -467,8 +472,8 @@ def double_city_plot(list_cities, list_stats, str_input):
     list_specs_city2_title = ret_list_stat_values(table_city2, type_stat)
     list_specs2 = list_specs_city2_title[0]
     figure(num=None, figsize=(16, 9), dpi=70, facecolor='w', edgecolor='k')
-    plt.scatter(list_months, list_specs1, marker='x', label=city1.capitalize())
-    plt.scatter(list_months, list_specs2, marker='s', label=city2.capitalize())
+    plt.plot(list_months, list_specs1, marker='x', label=city1.capitalize(), linestyle='solid', color='blue')
+    plt.plot(list_months, list_specs2, marker='s', label=city2.capitalize(), linestyle='solid', color='orange')
     if "Climate data for" in table_city1_title and "Climate data for" in table_city2_title:
         if "edit" in table_city1_title:
             parts = table_city1_title.split("edit")
@@ -494,24 +499,27 @@ def double_city_plot(list_cities, list_stats, str_input):
         return city2
 
 
+# main function that runs all the function modules
 def main(str_input):
     str_input = str_input.lower()
     plt.clf()
     generating_city_files()
+    # creates a list of all cities
     list_cities = create_list_cities()
     try:
+        # creates a list of stats by identifying the given city
         list_stats = create_list_stats(list_cities, str_input)
     except ValueError:
         raise ValueError("")
-        print("No Climate Table found for the given city")
-        return
     except AssertionError:
         print("Your sentence does not contain a city, or the city has a population lesser than 100k")
         return
     if list_stats == -1:
         print("Your sentence does not contain a city, or the city has a population lesser than 100k")
         return
+    # finds the number of cities in the entered string
     if not check_compare(list_cities, list_stats, str_input):
+        # string manipulation if containing a hyphen
         given_city = check_hyphen(str_input, list_cities)
         tuple_city_stat = assign_city_type_stat(list_cities, list_stats, str_input)
         if given_city == "" or given_city is None:
@@ -526,14 +534,16 @@ def main(str_input):
                 print("Your sentence does not contain a recognized climate statistic for this city")
                 return "no_stat", list_stats
             return
+        # plots the climate stats
         single_plot(given_city, type_stat)
         return given_city
     else:
         try:
+            # plots the stat comparing two cities
             return double_city_plot(list_cities, list_stats, str_input.lower())
         except AssertionError:
             print("Your sentence does not contain a city, or the city has a population lesser than 100k")
             print("or your sentence doesn't contain a recognized climate statistic for this city")
 
 
-main("dubai rainfall")
+main("bangalore chennai rainfall")
