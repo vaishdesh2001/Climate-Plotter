@@ -29,4 +29,4 @@ The Climate-Plotter is up and running!
 
 ## Usage
 
-Click 'Get a Climate Plot!' and enter a sentence containing a city(or two cities) and a climate statistic and hit enter!
+Click 'Get a Climate Plot!' and enter a sentence containing a city(or two) and a climate statistic and hit enter!
