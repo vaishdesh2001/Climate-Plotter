@@ -1,0 +1,35 @@
+,City,AQI,City Index,Latitude,Longitude,URL,Dominant,Dew,Humidity,Pressure,PM25,Temperature,Wind,Ozone,PM10,UV
+Mumbai,Mumbai,164,7020,19.07283,72.88261,https://aqicn.org/city/india/mumbai/us-consulate,pm25,22,78,1011,53,26,2.3,7,53,1
+Delhi,Delhi,183,7024,28.63576,77.22445,https://aqicn.org/city/india/new-delhi/us-embassy,pm25,13,87,1015,57,15,0.7,8,57,0
+Bangalore,Bangalore,132,11270,12.938539,77.5901,https://aqicn.org/city/india/bengaluru/hombegowda-nagar,pm25,17,94,709,27,24.2,1.1,31,27,0
+Hyderabad,Hyderabad,127,7022,17.38405,78.45636,https://aqicn.org/city/india/hyderabad/us-consulate,pm25,14,62,1018.5,51,21.5,2,25,51,2
+Ahmedabad,Ahmedabad,98,8192,22.9987886,72.6029661,https://aqicn.org/city/india/ahmedabad/maninagar,pm25,17,73.98,1011.1,58,21.96,3.46,19,58,1
+Chennai,Chennai,144,7023,13.08784,80.27847,https://aqicn.org/city/chennai//us-consulate,pm25,23,97,1012,45,23.5,0.5,28,45,0
+Kolkata,Kolkata,197,7021,22.56263,88.36304,https://aqicn.org/city/india/kolkata/us-consulate,pm25,15.5,96.5,1013,120,16,1.5,22,120,1
+Pune,Pune,115,3760,18.529603,73.849586,https://aqicn.org/city/pune/shivajinagar,pm25,18.9,49,949.6,48,28,0.73,18,48,0
+Jaipur,Jaipur,173,11304,26.9405166,75.8007016,https://aqicn.org/city/india/jaipur/shastri-nagar,pm25,14,63.6,730.9,45,20.97,1.25,27,45,1
+Lucknow,Lucknow,180,8673,26.84578611,80.93874444,https://aqicn.org/city/india/lucknow/lalbagh--west-lucknow,pm25,12,65,1009.9,65,14,0.46,33,65,1
+Kanpur,Kanpur,247,8187,26.4703088,80.3251749,https://aqicn.org/city/india/kanpur/nehru-nagar,pm25,12,96,752,57,35.6,1.8,31,57,1
+Nagpur,Nagpur,153,12444,21.152875,79.0517531,https://aqicn.org/city/india/nagpur/opp-gpo-civil-lines,pm25,10,32.760000000000005,1015,69,15.095,0.365,21,69,0
+Indore,Indore,157,12437,22.719444,75.870278,https://aqicn.org/city/india/indore/chhoti-gwaltoli,pm25,8,61,703,45,30.5,0.3,27,45,0
+Thane,Thane,170,12459,19.1375,72.915056,https://aqicn.org/city/india/mumbai/powai,pm25,22,91.63,1005.34,53,26,0.33,7,53,1
+Bhopal,Bhopal,153,12429,23.233584,77.400574,https://aqicn.org/city/india/bhopal/t-t-nagar,pm25,15,58,706,44,31.1,0.5,23,44,1
+Patna,Patna,191,12744,25.619651,85.147382,https://aqicn.org/city/india/patna/muradpur,pm25,12.5,99.57249999999999,755.1,72,13,0.42500000000000004,46,72,0
+Ghaziabad,Ghaziabad,305,11899,28.685382,77.453839,https://aqicn.org/city/india/ghaziabad/sanjay-nagar,pm10,13,55.5,741,53,27.750000000000004,0.675,15,53,1
+Ludhiana,Ludhiana,72,11272,30.9019147,75.8077749,https://aqicn.org/city/india/ludhiana/punjab-agricultural-university,pm25,11.6,98.96,0,56,12.865,0.37,14,56,1
+Agra,Agra,228,8186,27.19865833,78.00598056,https://aqicn.org/city/india/agra/sanjay-palace,pm25,15.2,80,745,54,28.2,0.2,27,54,1
+Nashik,Nashik,160,11283,20.0073285,73.7762427,https://aqicn.org/city/india/nashik/gangapur-road,pm25,16.1,78.5,0,45,21.2,1.96,22,45,2
+Faridabad,Faridabad,200,8672,28.41012222,77.313775,https://aqicn.org/city/india/faridabad/sector16a-faridabad,pm25,13,59.75,735,57,29.65,0.925,11,57,1
+Meerut,Meerut,188,12430,29.06351,77.709723,https://aqicn.org/city/india/meerut/pallavpuram-phase-2,pm25,13,91,741,48,33.7,0.5,26,48,0
+Varanasi,Varanasi,188,8189,25.35055556,82.97833333,https://aqicn.org/city/india/varanasi/ardhali-bazar,pm25,13.7,89,739,68,33.6,0.3,41,68,1
+Amritsar,Amritsar,152,11321,31.6199803,74.8764849,https://aqicn.org/city/india/amritsar/golden-temple,pm25,8,91.24,1016,65,13.05,0.14,17,65,0
+Navi Mumbai,Navi Mumbai,179,11898,19.008751,73.01662,https://aqicn.org/city/india/navi-mumbai/nerul,pm25,22,56,1009.36,57,26,0.42,12,57,0
+Howrah,Howrah,175,11320,22.5707053,88.3008448,https://aqicn.org/city/india/howrah/padmapukur,pm25,15.5,99.15,1009.875,122,16,1.165,19,122,0
+Gwalior,Gwalior,168,12817,26.203442,78.193251,https://aqicn.org/city/india/gwalior/city-center,pm25,12,93,742,50,21.4,0.3,34,50,1
+Jabalpur,Jabalpur,107,12427,23.168606,79.932247,https://aqicn.org/city/india/jabalpur/marhatal,pm25,11,68,720,45,29.6,1.1,24,45,0
+Coimbatore,Coimbatore,95,11847,10.942451,76.978996,https://aqicn.org/city/india/coimbatore/sidco-kurichi,pm25,21,93.4,811.1,50,22,3.5324999999999998,31,50,2
+Jodhpur,Jodhpur,107,12433,26.268249,73.0193853,https://aqicn.org/city/india/jodhpur/collectorate,pm25,14.8,38.32,725.6,39,23.67,0.81,25,39,1
+Kota,Kota,154,11285,25.1438895,75.8212555,https://aqicn.org/city/india/kota/shrinath-puram,pm25,12.3,74.54,743.11,43,19.09,0.3,27,43,1
+Chandigarh,Chandigarh,89,12428,30.751462,76.762879,https://aqicn.org/city/india/chandigarh/sector-25,pm25,10.9,99.08,974.5,45,12.4,0.29,9,45,0
+Guwahati,Guwahati,171,11844,26.1445,91.7362,https://aqicn.org/city/india/guwahati/railway-colony,pm25,16,94.89,1005.54,53,16,0.48,25,53,1
+Solapur,Solapur,91,8729,17.6599188,75.9063906,https://aqicn.org/city/india/solapur/solapur,pm25,11.3,57.4075,960.86,46,23.294999999999998,0.88,23,46,2
